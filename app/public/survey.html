@@ -1,50 +1,210 @@
-//Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Star Wars - Express</title>
+  <title>Friend Finder</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
 </head>
+
 <body>
 
   <div class="container">
     <div class="jumbotron">
-      <h1>Star Wars Express</h1>
-      <h3>The greatest resource in the galaxy for Star Wars statistics!</h3>
+      
+      <h1>Friend Finder</h1>
+      <h3>Find other people that hate the same shit you do!</h3>
       <hr>
-      <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> Search Characters</button></a>
-      <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Add New Character</button></a>
-    </div>
-    <div class="row">
+      <form><!--form-->
+        <div class="form-group">
+          <label for="nameInput">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Your Name">
+        </div><!--end form-group/name-->
+        <div class="form-group">
+          <label for="photoURL">Photo Link</label>
+          <input type="text" class="form-control" id="friendPhoto" placeholder="Link to Profile Photo">
+        </div><!--end form group/photoURL-->
+      </form><!--end form-->
 
+    </div><!--end jumbotron-->
+
+    <div class="row"><!--Questionaire-->
       <div class="col-lg-12">
-
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><strong>Character Database</strong></h3>
-          </div>
+            <h3 class="panel-title"><strong>Friend Database</strong></h3>
+          </div><!--end panel heading-->
+
           <div class="panel-body" id="well-section">
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              <div class="dropdown"><!-- dropdown button 1-->
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 1
+                </button>
+                
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                  <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+                </div>
+              </div><!--end dropdown btn 1-->
 
-  <script type="text/javascript">
+                <br>
 
-    $.get("/api/characters", function(data) {
+              <div class="dropdown"><!--dropdown button 2-->
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 2
+                </button>
+                  
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                  <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+                </div>
+              </div><!--end dropdown button 2-->
+
+                <br>
+
+              <div class="dropdown"><!--dropdown button 3-->
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 3
+                </button>
+                  
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                  <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+                </div>
+              </div><!--end drowdown button 3-->
+
+                <br>
+
+              <div class="dropdown"><!--dropdown button 4-->
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 4
+                </button>
+                  
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                  <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+                </div>
+              </div><!--end dropdown button 4-->
+
+                <br>
+
+              <div class="dropdown"><!--dropdown button 5-->
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 5
+                </button>
+                  
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                  <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+                </div>
+              </div><!--end dropdown button 5-->
+
+                <br>
+
+              <div class="dropdown"><!--dropdown button 6-->
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 6
+                </button>
+                    
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                  <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+                </div>
+              </div><!--end dropdown button 6-->
+
+                <br>
+
+              <div class="dropdown"><!--dropdown button 7-->
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 7
+                </button>
+                  
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                  <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+                </div>
+              </div><!--end dropdown button 7-->
+
+                <br>
+
+              <div class="dropdown"><!--dropdown button 8-->
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 8
+              </button>
+                
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                <a class="dropdown-item" href="#">2</a>
+                <a class="dropdown-item" href="#">3</a>
+                <a class="dropdown-item" href="#">4</a>
+                <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+              </div>
+              </div><!--end dropdown button 8-->
+
+                <br>
+
+              <div class="dropdown"><!--dropdown button 9-->
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 9
+                </button>
+                  
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                  <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+                </div>
+              </div><!--end dropdown button 9-->
+
+                <br>
+
+              <div class="dropdown"><!--dropdown button 10-->
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Answer 10
+                </button>
+                  
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">1 (Strongly Disagree)</a>
+                  <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5 (Strongly Agree)</a>
+                </div>
+              </div><!--end dropdown button 10-->
+
+                <br> 
+
+          </div><!--end well-section-->
+        </div><!--end panel-->
+      </div><!--end col-->
+    </div><!--end row/ Questionaire-->
+
+  </div><!--end container-->
+
+  <!-- <script type="text/javascript">
+
+    $.get("/api/friends", function(data) {
       for (var i = 0; i < data.length; i++) {
         var wellSection = $("<div>");
         wellSection.addClass("well");
-        wellSection.attr("id", "character-well-" + i);
+        wellSection.attr("id", "friend-well-" + i);
         $("#well-section").append(wellSection);
 
         $("#character-well-" + i).append("<h2>" + data[i].name + "</h2>");
@@ -53,7 +213,7 @@
         $("#character-well-" + i).append("<h3>Force Points: " + data[i].forcePoints + "</h4>");
       }
     });
-  </script>
+  </script> -->
   
 </body>
 </html>
