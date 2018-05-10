@@ -16,6 +16,8 @@ let friendData = [
   }
 ];
 
+const newFriends =[];
+
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "app/public/home.html"));
 });
@@ -24,7 +26,15 @@ app.get("/survey", function(req, res) {
   res.sendFile(path.join(__dirname, "app/public/survey.html"));
 });
 
+app.get('api/newFriends', (req, res) => {
+  res.json(friendData); 
+})
 
+app.post('api/newFriends', function(req, res){ 
+  console.log(req.body);
+  const newFriendData = req.body;
+  newFriends.push(newFriendData);
+})
 
 
 
