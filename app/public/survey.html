@@ -245,7 +245,7 @@
     let newFriend = {
       name: $("#name").val().trim(),
       photo: $("#photo").val().trim(),
-      surveyData: surveyAns
+      score: surveyAns
     };
     // console.log(newFriend);
 
@@ -271,8 +271,10 @@
       for (let i = 0; i < res.length-1; i++) {
         let matchArr =[];
         let totals = 0;
+        console.log(newFriend);
+        console.log(res);
         for (let x =0; x < 10; x++) { 
-          matchArr.push(Math.abs(newFriend.surveyData[x] - res[i].surveyData[x])); 
+          matchArr.push(Math.abs(newFriend.score[x] - res[i].score[x])); 
         }
         matchArr.forEach(score => {
           totals += score; 

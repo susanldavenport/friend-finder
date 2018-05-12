@@ -2,17 +2,17 @@ var friendData = [
   {
   "name":"Meg Griffin",
   "photo":"https://en.wikipedia.org/wiki/Meg_Griffin#/media/File:Meg_Griffin.png",
-  "scores":[5,3,2,4,3,1,5,5,4,2]
+  "score":[5,3,2,4,3,1,5,5,4,2]
   },
   {
   "name":"Daria Morgandorfer",
   "photo":"https://en.wikipedia.org/wiki/Daria_Morgendorffer#/media/File:Daria_Morgendorffer.png",
-  "scores":[3,2,1,4,4,5,2,1,2,4]
+  "score":[3,2,1,4,4,5,2,1,2,4]
   },
   {
   "name":"Tina Belcher",
   "photo":"http://bobs-burgers.wikia.com/wiki/Tina_Belcher?file=Tina_render.png",
-  "scores":[1,2,4,2,5,4,2,3,2,5]
+  "score":[1,2,4,2,5,4,2,3,2,5]
   },
 ];
 
