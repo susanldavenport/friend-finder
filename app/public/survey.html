@@ -26,7 +26,7 @@
         </div><!--end form-group/name-->
         <div class="form-group">
           <label for="photoURL">Photo Link</label>
-          <input type="text" class="form-control" id="friendPhoto" placeholder="Link to Profile Photo">
+          <input type="text" class="form-control" id="photo" placeholder="Link to Profile Photo">
         </div><!--end form group/photoURL-->
       </form><!--end form-->
 
@@ -44,7 +44,7 @@
             <div class="question_text"><strong>I agree with the following statement:</strong></div>
           
             <div class="form-group">
-              <label for="sel1">You are always thinking outside the box.</label>
+              <label for="sel1">Cats are of the devil.</label>
               <select class="form-control" id="q1">
                 <option value="1">1 Strongly Disagree</option>
                 <option value="2">2</option>
@@ -57,7 +57,7 @@
               <br>
 
             <div class="form-group">
-            <label for="sel1">You are always thinking outside the box.</label>
+            <label for="sel2">I refuse to eat with cheap chopsticks.</label>
             <select class="form-control" id="q2">
               <option value="1">1 Strongly Disagree</option>
               <option value="2">2</option>
@@ -70,7 +70,7 @@
              <br>
 
           <div class="form-group">
-            <label for="sel1">You are always thinking outside the box.</label>
+            <label for="sel3">Never trust a skinny cook.</label>
             <select class="form-control" id="q3">
               <option value="1">1 Strongly Disagree</option>
               <option value="2">2</option>
@@ -83,7 +83,7 @@
           <br>
 
           <div class="form-group">
-            <label for="sel1">You are always thinking outside the box.</label>
+            <label for="sel4">German Wifi is the Wurst.</label>
             <select class="form-control" id="q4">
               <option value="1">1 Strongly Disagree</option>
               <option value="2">2</option>
@@ -96,7 +96,7 @@
             <br>
 
           <div class="form-group">
-            <label for="sel1">You are always thinking outside the box.</label>
+            <label for="sel5">I love tacos as much as Kanye loves Kanye.</label>
             <select class="form-control" id="q5">
               <option value="1">1 Strongly Disagree</option>
               <option value="2">2</option>
@@ -109,7 +109,7 @@
             <br>
 
           <div class="form-group">
-            <label for="sel1">You are always thinking outside the box.</label>
+            <label for="sel6">Coffee keeps me busy until its acceptable to drink wine.</label>
             <select class="form-control" id="q6">
               <option value="1">1 Strongly Disagree</option>
               <option value="2">2</option>
@@ -122,7 +122,7 @@
             <br>
 
           <div class="form-group">
-            <label for="sel1">You are always thinking outside the box.</label>
+            <label for="sel7">Glitter is the herpes of crafts.</label>
             <select class="form-control" id="q7">
               <option value="1">1 Strongly Disagree</option>
               <option value="2">2</option>
@@ -134,7 +134,7 @@
 
             <br>
           <div class="form-group">
-            <label for="sel1">You are always thinking outside the box.</label>
+            <label for="sel8">I panic when someone says "I need to talk to you".</label>
             <select class="form-control" id="q8">
               <option value="1">1 Strongly Disagree</option>
               <option value="2">2</option>
@@ -147,7 +147,7 @@
             <br>
 
           <div class="form-group">
-            <label for="sel1">You are always thinking outside the box.</label>
+            <label for="sel9">Netflix and STFU I'm watching Netflix.</label>
             <select class="form-control" id="q9">
               <option value="1">1 Strongly Disagree</option>
               <option value="2">2</option>
@@ -160,7 +160,7 @@
             <br>
 
             <div class="form-group">
-              <label for="sel1">You are always thinking outside the box.</label>
+              <label for="sel10">More Cowbell.</label>
               <select class="form-control" id="q10">
                 <option value="1">1 Strongly Disagree</option>
                 <option value="2">2</option>
@@ -170,14 +170,53 @@
               </select>
             </div>      
 
-            <button type="button" id="questionSubmit" class="btn btn-info btn-lg btn-block">Submit</button>
+            <button type="button" id="submit" class="btn btn-info btn-lg btn-block">Submit</button>
               
           </div><!--end well-section-->
         </div><!--end panel-->
       </div><!--end col-->
     </div><!--end row/ Questionaire-->
-
   </div><!--end container-->
+
+  <!-- Start Modals -->
+  <!--Matches Modal-->
+  <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="matchModalTitle">Say Hi to your New Friend!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 id='match-name'></h2>
+          <img id="match-img" alt="friend Pic" >
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Warning Modal-->
+  <div class="modal fade bg-dark" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="matchModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title text-center" id="matchModalTitle">Whoa!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Please make sure you have filled in all the required fields before beginning the search for your new friend. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script type="text/javascript">
 
@@ -208,6 +247,7 @@
       photo: $("#photo").val().trim(),
       surveyData: surveyAns
     };
+    // console.log(newFriend);
 
     friendFinder(newFriend); 
 
@@ -220,6 +260,48 @@
     $('#matchModal').modal('show');
     };
   });
+
+
+   function friendFinder(newFriend) {
+    let matchContact= []; 
+    $.get("/api/friends", function(res) {
+      let matchTotals = [];
+      let bestMatch; 
+      let bestMatchIndex; 
+      for (let i = 0; i < res.length-1; i++) {
+        let matchArr =[];
+        let totals = 0;
+        for (let x =0; x < 10; x++) { 
+          matchArr.push(Math.abs(newFriend.surveyData[x] - res[i].surveyData[x])); 
+        }
+        matchArr.forEach(score => {
+          totals += score; 
+        })
+        let tempArr = []; 
+        tempArr.push(i, totals); 
+        matchTotals.push(tempArr); 
+        bestMatch = matchTotals.sort(function(a, b){
+          return b[1] > a[1] ? -1 : 1; 
+        });
+        
+        bestMatchIndex = parseFloat(bestMatch[0][0]);
+      }
+      let newFriendMatch = {
+        name: res[bestMatchIndex].name,
+        email: res[bestMatchIndex].email,
+        photo: res[bestMatchIndex].photo
+      }; 
+      // console.log(newFriendMatch); 
+     
+      $('#match-name').text(newFriendMatch.name); 
+      $('#match-img').attr('src', newFriendMatch.photo); 
+      
+      matchContact.push(newFriend); 
+      matchContact.push(newFriendMatch); 
+    }); // end GET
+
+  }; 
+
   </script>
   
 </body>
